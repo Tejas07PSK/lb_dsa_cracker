@@ -7,3 +7,4 @@
 
 ### Solutions
 - **_Solution1.java_** :point_right: Uses modified merge-sort technique.
+- **_Solution2.java_** :point_right: Uses Augemented BST, with self balancing property. (AVL Tree is used here, but you can also use Red-Black Tree)
