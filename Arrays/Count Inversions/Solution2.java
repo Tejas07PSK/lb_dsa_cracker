@@ -1,10 +1,10 @@
 class TreeNode {
-	public long val;	// store value of node as froun in original array
-	public int height;  // store height of current node
-	public int noc;		// store number of children for current node
-	public int occr;	// store number of occurrences of node value, in original array
-	public TreeNode left;	// pointer to left sub tree
-	public TreeNode right;	// pointer to right sub tree
+	public long val;	// store value of node as froun in original array.
+	public int height;  // store height of current node.
+	public int noc;		// store number of children for current node.
+	public int occr;	// store number of occurrences of node value, in original array.
+	public TreeNode left;	// pointer to left sub tree.
+	public TreeNode right;	// pointer to right sub tree.
 	public TreeNode () {
 		val = 0; height = 0; noc = 0;
 		occr = 1; left = null; right = null;
@@ -17,8 +17,8 @@ class TreeNode {
 }
 
 class Solution2 {
-	private static long nof_inv_pairs; // counter for inversion pairs in array
-	private static int al_ex_flg;	// flag to determine if value already exists in tree, to avoid duplicate entries
+	private static long nof_inv_pairs; // counter for inversion pairs in array.
+	private static int al_ex_flg;	// flag to determine if value already exists in tree, to avoid duplicate entries.
 	
 	public long inversionCount (long [] arr, long n) {
 		nof_inv_pairs = 0;
@@ -36,14 +36,14 @@ class Solution2 {
 			if (root.right == null) { root.right = node; }
 			else { TreeNode nrt = insertIntoAvlTree(root.right, node); root.right = nrt; }
 		} else if (node.val < root.val) {
-			nof_inv_pairs += (root.occr + ((root.right == null) ? 0 :( root.right.noc + root.right.occr))); // inversion will occure when insertion value is less than current node value, hence count count current node occurence + right sub tree childern will their corresponding occurrence.
+			nof_inv_pairs += (root.occr + ((root.right == null) ? 0 :( root.right.noc + root.right.occr))); // inversion will occur when insertion value is less than current node value, hence count parent node occurences + right sub tree childern will their corresponding occurrences.
 			if (root.left == null) { root.left = node; }
 			else { TreeNode nlt = insertIntoAvlTree(root.left, node); root.left = nlt; }
 		} else {
 		    nof_inv_pairs += ((root.right == null) ? 0 :( root.right.noc + root.right.occr)); // special corner case, where duplicate node already has a right subtree.
 		    root.occr++; al_ex_flg = 1; // don't increase current node occurrence before
 		}
-		setNoOfChildren(root); // always update child count for current node
+		setNoOfChildren(root); // always update child count for current node.
 		if (al_ex_flg != 1) {
 			setHeight(root);
 			root = rotate(root);
@@ -72,7 +72,7 @@ class Solution2 {
 		node.height = Math.max(((node.left == null) ? 0 : (node.left.height + 1)), ((node.right == null) ? 0 : (node.right.height + 1)));
 	}
 	
-	// for this problem while counting number of children for a node, consider their frequency also, as found in the original array
+	// for this problem while counting number of children for a node, consider their frequency also, as found in the original array.
 	private void setNoOfChildren (TreeNode node) {
 		node.noc = (((node.left == null) ? 0 : (node.left.noc + node.left.occr)) + ((node.right == null) ? 0 : (node.right.noc + node.right.occr)));
 	}
