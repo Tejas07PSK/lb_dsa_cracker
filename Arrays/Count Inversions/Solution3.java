@@ -28,7 +28,7 @@ class Solution3 {
 		long [] tmp_arr;
 		// compress array only if it has elements > 10^5 or < 1.
 		if (isCompArrReq(arr) == true) { tmp_arr = createCompressedArray(arr); }
-        else { setMaxFromArray(arr); tmp_arr = arr; }
+		else { setMaxFromArray(arr); tmp_arr = arr; }
 		BIT b = new BIT ((int)max_num);
 		for (long item : tmp_arr) {
 			nof_inv_pairs += (b.sum(max_num) - b.sum(item));
