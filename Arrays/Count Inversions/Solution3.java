@@ -1,4 +1,4 @@
-// standard slef implemented BIT (Binary Indexed Tree)/Fenwick Tree class.
+// standard self implemented BIT(Binary Indexed Tree)/Fenwick-Tree class.
 class BIT {
 	private long [] bit_arr;
 	BIT () { bit_arr = new long [100001]; }
@@ -19,7 +19,7 @@ class BIT {
 	}
 }
 
-// BIT solution is only applicable when size of array is <= 10^.
+// BIT solution is only applicable when size of array is <= 10^5.
 class Solution3 {
 	private long max_num; // store the max num found in the inp array.
 
