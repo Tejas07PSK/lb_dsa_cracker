@@ -40,9 +40,9 @@ class Solution3 {
 	private long [] createCompressedArray (long [] arr) {
 		long [] cp_arr = Arrays.copyOf(arr, arr.length);
 		HashMap <Long, Long> hm = new HashMap <> ();
-        setMaxFromArray(arr);
+		setMaxFromArray(arr);
 		Arrays.sort(cp_arr);
-        long c = 1L;
+		long c = 1L;
 		for (int j = 0; j < cp_arr.length; j++) {
 			if (!(hm.containsKey(cp_arr[j]))) {
 				hm.put(cp_arr[j], c); c++;
@@ -56,7 +56,7 @@ class Solution3 {
 	}
     
 	// find max element in the inp array.
-    private void setMaxFromArray (long [] arr) {
+	private void setMaxFromArray (long [] arr) {
 		max_num = Long.MIN_VALUE;
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] > max_num) { max_num = arr[i]; }
