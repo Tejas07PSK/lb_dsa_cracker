@@ -6,4 +6,4 @@
 - **_GeeksForGeeks_** :point_right: https://practice.geeksforgeeks.org/problems/count-pairs-with-given-sum5022/1#
 
 ### Solution
-- **_solution.py_** :point_right: Uses simple list/array traversal with dictionary/hash-map to store duplicate occurrences, **_time-complexity_ O(n)**, **_space-complexity_ O(1)**.
+- **_solution.py_** :point_right: Uses simple list/array traversal with dictionary/hash-map to store duplicate occurrences, **time-complexity O(n)**, **space-complexity O(1)**.
