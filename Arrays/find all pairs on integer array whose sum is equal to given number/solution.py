@@ -7,7 +7,7 @@ class Solution:
             if item > k:
                 continue
             diff = (k - item)
-            if diff in hm.keys():
+            if diff in hm:
                 res += hm[diff]
-            hm[item] = 1 if item not in hm.keys() else (hm[item] + 1)
+            hm[item] = 1 if item not in hm else (hm[item] + 1)
         return res
