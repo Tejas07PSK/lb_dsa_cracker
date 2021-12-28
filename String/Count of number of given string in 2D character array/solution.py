@@ -1,7 +1,7 @@
 class Solution:
     def dfs_search (self, curr_word_idx, curr_mat_row, curr_mat_col, r, c, n, word, matrix):
         res = 0
-        if ((curr_mat_row >= 0 and curr_mat_row < r) and (curr_mat_col >= 0 and curr_mat_col < r) and (word[curr_word_idx] == matrix[curr_mat_row][curr_mat_col])):
+        if ((curr_mat_row >= 0 and curr_mat_row < r) and (curr_mat_col >= 0 and curr_mat_col < c) and (word[curr_word_idx] == matrix[curr_mat_row][curr_mat_col])):
             temp = word[curr_word_idx]
             matrix[curr_mat_row][curr_mat_col] = '0'
             curr_word_idx += 1
