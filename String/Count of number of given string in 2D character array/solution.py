@@ -8,18 +8,17 @@ class Solution:
             if (curr_word_idx == n):
                 res = 1
             else:
-                res += self.dfs_search(curr_word_idx, curr_mat_row, (curr_mat_col - 1), r, c, n, word, matrix)
                 res += self.dfs_search(curr_word_idx, curr_mat_row, (curr_mat_col + 1), r, c, n, word, matrix)
-                res += self.dfs_search(curr_word_idx, (curr_mat_row - 1), curr_mat_col, r, c, n, word, matrix)
+                res += self.dfs_search(curr_word_idx, curr_mat_row, (curr_mat_col - 1), r, c, n, word, matrix)
                 res += self.dfs_search(curr_word_idx, (curr_mat_row + 1), curr_mat_col, r, c, n, word, matrix)
+                res += self.dfs_search(curr_word_idx, (curr_mat_row - 1), curr_mat_col, r, c, n, word, matrix)
             matrix[curr_mat_row][curr_mat_col] = temp
         return res
 
-    def countFrequency (self, word, str_list):
-        matrix = [list(string) for string in str_list]
-        r, c, n = len(matrix), len(matrix[0]), len(word)
+    def findOccurrence(self,mat,target):
+        r, c, n = len(mat), len(mat[0]), len(target)
         res = 0
         for i in range(r):
             for j in range(c):
-                res += self.dfs_search(0, i, j, r, c, n, word, matrix)
+                res += self.dfs_search(0, i, j, r, c, n, target, mat)
         return res
