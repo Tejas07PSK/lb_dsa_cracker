@@ -7,5 +7,5 @@
 
 ### Solution
 In all cases time complexity will be linear, but this questions is about reducing the number of comparisons, for more details visit the links below,
-:point_right: https://afteracademy.com/blog/find-the-minimum-and-maximum-value
-:point_right: https://math.stackexchange.com/questions/2829507/solve-the-recurrence-tn-2-tn-2-2
+- :point_right: https://afteracademy.com/blog/find-the-minimum-and-maximum-value
+- :point_right: https://math.stackexchange.com/questions/2829507/solve-the-recurrence-tn-2-tn-2-2
