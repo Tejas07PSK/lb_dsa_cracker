@@ -7,7 +7,6 @@ def size_of_bcs ():
     min_size = min(n, m, x, y) ; low, high, ans = 0, min_size, 0
     while (low <= high):
         mid = low + ((high - low) // 2)
-        sys.stdout.write('***********'+str(mid)+'*************\n')
         k1_row_start, k1_row_end = 0, mid - 1
         cm_sq_fnd = False
         while (k1_row_end < n):
@@ -17,18 +16,16 @@ def size_of_bcs ():
                 while (k2_row_end < x):
                     k2_col_start, k2_col_end = 0, mid - 1
                     while (k2_col_end < y):
-                        i, j, k, l, flag = k1_row_start, k1_col_start, k2_row_start, k2_col_start, True
+                        i, k, flag = k1_row_start, k2_row_start, True
                         while (i <= k1_row_end):
+                            j, l = k1_col_start, k2_col_start
                             while (j <= k1_col_end):
-                                sys.stdout.write(str(k2[k][l]) + ' ')
                                 if (k1[i][j] != k2[k][l]):
                                     flag = False ; break
                                 j += 1 ; l += 1
-                            sys.stdout.write('\n')
                             if (not flag):
                                 break
                             i += 1 ; k += 1
-                        sys.stdout.write('------------------------\n')
                         if (flag):
                             cm_sq_fnd = True ; break
                         k2_col_start += 1 ; k2_col_end += 1
