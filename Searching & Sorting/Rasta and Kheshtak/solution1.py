@@ -84,7 +84,6 @@ def size_of_bcs ():
                 if (cm_sq_fnd):
                     break
                 k2_row_start += 1 ; k2_row_end += 1
-
         if (cm_sq_fnd):
             ans = mid
             low = mid + 1
