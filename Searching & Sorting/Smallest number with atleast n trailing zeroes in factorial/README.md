@@ -1,4 +1,4 @@
-# Smallest number with atleast n trailing zeroes infactorial
+# Smallest number with atleast n trailing zeroes in factorial
 
 ---
 
