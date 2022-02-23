@@ -36,5 +36,3 @@ class Solution:
         i, cntr = left, 0
         while (i <= right):
             arr[i] = tmp_arr[cntr] ; i += 1 ; cntr += 1
-
-        
