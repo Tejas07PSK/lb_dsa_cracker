@@ -1,3 +1,5 @@
+import random
+
 class Solution:
     def quickSort (self, left, right, arr):
         size = right - left + 1
@@ -10,12 +12,10 @@ class Solution:
         self.quickSort(left, (mid - 1), arr) ; self.quickSort((mid + 1), right, arr)
 
     def partitionIndex (self, left, right, arr):
-        pivot = arr[right] ; i, j = 0, right - 1
-        while (True):
-            while ((i <= right) and (arr[i] <= pivot)):
-                i += 1
-            while ((j >= left) and (arr[i] >= pivot)):
-                j -= 1
-            if (i >= j): break
-            arr[i], arr[right] = arr[right], arr[i]
-        return i
+        idx = random.randint(left, right) ; arr[idx], arr[right] = arr[right], arr[idx]
+        pivot = arr[right] ; i, j = 0, 0
+        while (i <= right):
+            if (arr[i] <= pivot):
+                arr[j], arr[i] = arr[i], arr[j] ; i += 1 ; j += 1
+            else: i += 1
+        return j - 1
