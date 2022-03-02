@@ -9,11 +9,14 @@ class Solution:
                 arr[left], arr[right] = arr[right], arr[left]
             return
         mid1, mid2 = self.partitionIndex(left, right, arr)
-        self.quickSort(left, mid1, arr) ; self.quickSort(mid2, right, arr)
+        if (mid1 >= left):
+            self.quickSort(left, mid1, arr)
+        if (mid2 <= right):
+            self.quickSort(mid2, right, arr)
 
     def partitionIndex (self, left, right, arr):
         idx = random.randint(left, right) ; arr[idx], arr[right] = arr[right], arr[idx]
-        pivot = arr[right] ; i, j, k = 0, 0, right
+        pivot = arr[right] ; i, j, k = left, left, right
         while (i <= k):
             if (arr[i] < pivot):
                 arr[j], arr[i] = arr[i], arr[j] ; i += 1 ; j += 1
