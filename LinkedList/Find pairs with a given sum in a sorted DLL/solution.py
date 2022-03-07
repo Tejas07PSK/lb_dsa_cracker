@@ -17,21 +17,27 @@ class Solution:
         if (head == None):
             print(None) ; return
         i, j = head, tail
-        while ((j != i) or (j.next != i)):
-            sum = i.data + j.data
-            if (sum < k): i = i.next
-            elif (sum > k): j = j.prev
-            else: print((i.data, j.data))
+        while ((j != i) and (j.next != i)):
+            summ = i.data + j.data
+            if (summ < k): i = i.next
+            elif (summ > k): j = j.prev
+            else:
+                print((i.data, j.data)) ; i = i.next
 
     def __printList (self, head):
         while (head != None):
             print(head.data, end=' ') ; head = head.next
         print()
 
+    def __printListReverse (self, tail):
+        while (tail != None):
+            print(tail.data, end=' ') ; tail = tail.prev
+        print()
+
     def main (self):
         arr = [2, 5, 4, 9, 8, 1, 6] ; n = len(arr) ; k = 7
         head, tail = self.__formSortedDll(arr, n)
-        self.__printList(head)
+        self.__printList(head) ; self.__printListReverse(tail)
         self.__printPairs(head, tail, k)
 
 Solution().main()
