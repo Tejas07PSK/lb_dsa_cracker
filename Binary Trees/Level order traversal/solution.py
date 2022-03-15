@@ -1,3 +1,11 @@
+'''
+class Node:
+    def __init__(self,val):
+        self.data = val
+        self.left = None
+        self.right = None
+'''
+
 from collections import deque
 class Solution:
     def levelOrder (self, root):
