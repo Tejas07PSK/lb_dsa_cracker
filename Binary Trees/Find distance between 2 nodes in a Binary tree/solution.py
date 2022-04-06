@@ -25,5 +25,5 @@ class Solution:
         return lca_child_count, dist
 
     def findDist (self, root, a, b):
-        self.visited = 0 ; dist  = self.__dfs_helper(root, a, b)[1]
+        self.visited = 0 ; dist = self.__dfs_helper(root, a, b)[1]
         return -1 if (self.visited < 2) else dist
