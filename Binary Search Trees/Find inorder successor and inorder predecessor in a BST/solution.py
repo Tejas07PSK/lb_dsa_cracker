@@ -13,11 +13,11 @@ def findPreSuc (root, key):
 	while (ptr != None):
 		if (key == ptr.data):
 			if (ptr.left != None):
-                ptr_in_pred = ptr.left
+				ptr_in_pred = ptr.left
 				while (ptr_in_pred.right != None): ptr_in_pred = ptr_in_pred.right
 				res[0] = ptr_in_pred.data
 			if (ptr.right != None):
-                ptr_in_succ = ptr.right
+				ptr_in_succ = ptr.right
 				while (ptr_in_succ.left != None): ptr_in_succ = ptr_in_succ.left
 				res[1] = ptr_in_succ.data
 			return res
