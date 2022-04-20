@@ -10,4 +10,5 @@ def isPreorderValid (arr):
             prev = stk.pop()
             while ((stk) and (arr[i] > stk[-1][0])): prev = stk.pop()
             stk.append((arr[i], prev[0]))
+    stk.clear()
     return res
