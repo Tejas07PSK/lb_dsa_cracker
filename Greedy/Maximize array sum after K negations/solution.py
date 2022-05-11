@@ -2,6 +2,7 @@ from math import inf
 class Solution:
     def maximizeSum (self, A, N, K):
         if (N == 0): return 0
+        A.sort()
         min_after_negations, min_after_negations_idx = inf, -1
         for i in range(N):
             if (K == 0): break
