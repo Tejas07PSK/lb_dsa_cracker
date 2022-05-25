@@ -6,4 +6,4 @@
 - **__SPOJ__** :point_right: https://www.spoj.com/problems/GCJ101BB/
 
 ### Solution
-- **_solution.py_** :point_right: use ad-hoc greedy logic **time-complexity O(N)**, **space-complexity O(1)**.
+- **_solution.py_** :point_right: use ad-hoc greedy logic **time-complexity O(N)**, **space-complexity O(1)**
