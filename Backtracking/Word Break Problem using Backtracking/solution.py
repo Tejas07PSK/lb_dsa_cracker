@@ -8,15 +8,14 @@ class Solution:
                 rem_sen = self.__wordBreakHelper(end, s, n)
                 if (rem_sen != None):
                     if (self.dp[start] == None): self.dp[start] = []
-                    if (end == n):
-                        self.dp[start].append(prefix)
+                    if (end == n): self.dp[start].append(prefix)
                     else:
                         for sen in rem_sen: self.dp[start].append(prefix + " " + sen)
-        #if (not self.dp[start]): self.dp[start].append("")
+        if (self.dp[start] == None): self.dp[start] = []
         return self.dp[start]
 
     def wordBreak (self, n, dic, s):
+        n = len(s)
         self.dp, self.set_of_words = [None for i in range(n)], set(dic)
         self.__wordBreakHelper(0, s, n)
-        print(self.dp)
         return self.dp[0]
