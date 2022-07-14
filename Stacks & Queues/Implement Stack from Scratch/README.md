@@ -1,4 +1,4 @@
-#  Implement Stack from Scratch
+# Implement Stack from Scratch
 
 ---
 
