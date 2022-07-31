@@ -1,23 +1,13 @@
-class Solution {
-    private static void addAtBottom (Stack <Integer> s, int element) {
-        if (!(s.isEmpty())) {
-            int curr_ele = s.pop();
-            addAtBottom(s, element);
-            s.push(curr_ele);
-        } else { s.push(element); }
-    }
+class Solution:
+    def __addAtBottom (self, stk, element)
+        if (stk):
+            curr_ele = stk.pop()
+            self.__addAtBottom(stk)
+            stk.append(curr_ele)
+        else: stk.append(element)
 
-    private static void reverseHelper (Stack <Integer> s) {
-        if (s.isEmpty()) { return; }
-        int element = s.pop();
-        reverseHelper(s);
-        addAtBottom(s, element);
-    }
-
-    static ArrayList <Integer> reverse (Stack <Integer> s) {
-        ArrayList <Integer> res = new ArrayList <Integer> ();
-        reverseHelper(s);
-        while (!(s.isEmpty())) { res.add(0, s.pop()); }
-        return res;
-    }
-}
+    def reverse (self, stk):
+        if (not stk): return
+        element = stk.pop()
+        self.reverse(stk)
+        self.__addAtBottom(stk, element)
