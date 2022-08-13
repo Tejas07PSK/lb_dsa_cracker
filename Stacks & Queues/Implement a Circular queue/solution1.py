@@ -28,8 +28,8 @@ class MyCircularQueue:
 
     def Rear (self) -> int:
         if (self.isEmpty()): return -1
-        return self.tail.data       
+        return self.tail.data
 
-    def isEmpty (self) -> bool: return (self.size == 0)        
+    def isEmpty (self) -> bool: return (self.size == 0)
 
     def isFull(self) -> bool: return (self.size == self.limit)
