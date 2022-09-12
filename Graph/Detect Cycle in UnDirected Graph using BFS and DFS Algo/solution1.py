@@ -9,13 +9,14 @@ class Solution:
             else:
                 if (vert == idx): return True
                 if ((vert in self.curr_dfs_trace) and (vert != prev_idx)): return True
+        self.curr_dfs_trace.remove(idx)
         return False
 
     def isCycle (self, V, adj_lst):
         self.visited = [False for i in range(V)]
+        self.curr_dfs_trace = set()
         for i in range(V):
             if (not self.visited[i]):
-                self.curr_dfs_trace = set()
                 res = self.__isCyclicHelper(i, None, adj_lst)
                 if (res == True): return True
         return False
