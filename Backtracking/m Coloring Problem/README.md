@@ -1,4 +1,4 @@
-# Sudoku Solver
+# m Coloring Problem
 
 ---
 
