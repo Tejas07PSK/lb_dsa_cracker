@@ -6,4 +6,4 @@
 - **__GeeksForGeeks__** :point_right: https://practice.geeksforgeeks.org/problems/minimum-time-taken-by-each-job-to-be-completed-given-by-a-directed-acyclic-graph/1
 
 ### Solution
-- **_solution2.py_** :point_right: use kahn's bfs topological sort algo, but traverse level by level while inside queue loop, each level will correspond to the current time **time-complexity O(V+E)**, **space-complexity O(V)**.
+- **_solution.py_** :point_right: use kahn's bfs topological sort algo, but traverse level by level while inside queue loop, each level will correspond to the current time **time-complexity O(V+E)**, **space-complexity O(V)**.
