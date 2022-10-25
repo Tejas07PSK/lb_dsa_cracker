@@ -1,4 +1,4 @@
-# Find if there is a path of more thank length from a source
+# Find if there is a path of more than k length from a source
 
 ---
 
