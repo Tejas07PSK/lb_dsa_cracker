@@ -1,1 +1,1 @@
-from
+from math import inf
