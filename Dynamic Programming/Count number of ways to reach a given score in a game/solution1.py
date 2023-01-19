@@ -3,8 +3,8 @@ def __helper (i, target, arr, dp):
     if (i == len(arr)): return 0
     if (dp[i][target] == None):
         dp[i][target] = 0
-        if ((target - arr[i]) >= 0):
-            dp[i][target] = __helper(i + 1, target, arr, dp) + __helper(i, target - arr[i], arr, dp)
+        dp[i][target] += __helper(i + 1, target, arr, dp)
+        if ((target - arr[i]) >= 0): dp[i][target] += __helper(i, target - arr[i], arr, dp)
     return dp[i][target]
 
 def count (n):
