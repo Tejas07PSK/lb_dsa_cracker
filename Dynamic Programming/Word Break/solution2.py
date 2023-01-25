@@ -16,21 +16,17 @@ class Trie:
         ptr.is_end = True
 
 class Solution:
-    def __word_break_helper (self, i, line):
-        if (i == len(line)): return True
-        if (self.dp[i] == None):
-            self.dp[i] = False
-            ptr = self.dct_trie.root
+    def wordBreak (self, line, dictionary):
+        dp = [None for i in range(len(line) + 1)] ; dp[len(line)] = True
+        dct_trie = Trie()
+        for word in dictionary: dct_trie.insert(word)
+        for i in range(len(line) - 1, -1, -1):
+            dp[i] = False
+            ptr = dct_trie.root
             for j in range(i, len(line)):
                 if (line[j] not in ptr.children): break
                 ptr = ptr.children[line[j]]
                 if (ptr.is_end):
-                    if (self.__word_break_helper(j + 1, line)):
-                        self.dp[i] = True ; break
-        return self.dp[i]
-
-    def wordBreak (self, line, dictionary):
-        self.dp = [None for i in range(len(line) + 1)]
-        self.dct_trie = Trie()
-        for word in dictionary: self.dct_trie.insert(word)
-        return self.__word_break_helper(0, line)
+                    if (dp[j + 1]):
+                        dp[i] = True ; break
+        return dp[0]
