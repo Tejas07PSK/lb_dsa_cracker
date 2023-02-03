@@ -1,3 +1,4 @@
+import
 class Solution:
 	def AlternatingaMaxLength (self, nums):
 		prev_lt_sz, prev_gt_sz = 1, 1
