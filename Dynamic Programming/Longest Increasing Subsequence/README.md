@@ -10,3 +10,4 @@
 - **_solution2.py_** :point_right: use bottom-up dp with tabulation **time-complexity O(N^2)**, **space-complexity O(N^2)**
 - **_solution3.py_** :point_right: use bottom-up dp with tabulation, space-optimized **time-complexity O(N^2)**, **space-complexity O(N)**
 - **_solution4.py_** :point_right: use binary-search approach, search yt **time-complexity O(NlogN)**, **space-complexity O(N)**
+- **_solution5.py_** :point_right: another bottom up dp approach, space optimized **time-complexity O(N^2)**, **space-complexity O(N)**
