@@ -3,7 +3,7 @@
 ---
 
 ### Problem Links
-- **__GeeksForGeeks__** :point_right: hhttps://practice.geeksforgeeks.org/problems/gold-mine-problem2608/1
+- **__GeeksForGeeks__** :point_right: https://practice.geeksforgeeks.org/problems/gold-mine-problem2608/1
 
 ### Solution
 - **_solution1.py_** :point_right: use top-down dp with memoization **time-complexity O(NM)**, **space-complexity O(NM)**
