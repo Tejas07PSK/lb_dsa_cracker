@@ -20,15 +20,7 @@ class Solution:
 	        [8, 5, 7, 0, 9],
 	        [9, 6, 8]
 	    ]
-	    """0 0, 0 8
-	    1 1, 1 4, 1 2
-	    2 2, 2 1, 2 3, 2 5,
-	    3 3, 3 2, 3 6
-	    4 4, 4 1"""
 	    self.dp = [[None for j in range(10)] for i in range(N + 1)]
 	    ans = 0
-	    for i in range(10):
-	        #if (self.dp[N][i] == None):
-	            ans += self.__get_count_helper(i, N)
-	    #print(self.dp)
+	    for i in range(10): ans += self.__get_count_helper(i, N)
 	    return ans
