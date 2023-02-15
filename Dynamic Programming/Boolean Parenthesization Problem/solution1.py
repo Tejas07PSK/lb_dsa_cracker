@@ -1,5 +1,3 @@
-import sys
-sys.setrecursionlimit(100000)
 class Solution:
     def __count_ways_helper (self, i, j, string):
         if (i == j):
