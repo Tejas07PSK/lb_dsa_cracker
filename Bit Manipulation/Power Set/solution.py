@@ -14,5 +14,5 @@ class Solution:
 		        tmp_i >>= 1
 		        index += 1
 		    res.append("".join(tmp_ch_arr))
-        res.sort()
+			res.sort()
 		return res
