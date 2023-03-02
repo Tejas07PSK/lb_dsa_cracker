@@ -1,4 +1,4 @@
-# Find Largest sum contiguous Subarray [V. IMP]
+# Kadane's Algo [V.V.V.V.V IMP]
 
 ---
 
