@@ -7,5 +7,5 @@
 
 ### Solutions
 - **_solution1.py_** :point_right: Uses modified merge-sort technique **time-complexity O(Nlog(N))**, **space-complexity O(N)**.
-- **_Solution2.java_** :point_right: Uses Augemented BST, with self balancing property. (AVL Tree is used here, but you can also use Red-Black Tree)
-- **_Solution3.java_** :point_right: Uses special BIT/Fenwick-Tree technique.
+- **_solution2.py_** :point_right: Uses Augemented BST, with self balancing property. (AVL Tree is used here, but you can also use Red-Black Tree) **time-complexity O(Nlog(N))**, **space-complexity O(N)**.
+- **_solution3.py_** :point_right: Uses special BIT/Fenwick-Tree technique **time-complexity O(Nlog(N))**, **space-complexity O(N)**.
