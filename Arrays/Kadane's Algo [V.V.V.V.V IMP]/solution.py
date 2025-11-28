@@ -5,3 +5,4 @@ class Solution:
             curr_max = max((curr_max + arr[i]), arr[i])
             glob_max = max(glob_max, curr_max)
         return glob_max
+
